@@ -17,6 +17,8 @@ Production URLs default to `https://coffeehouse.rice.edu`. Set the `SITE_URL` en
 
 Run `npm run check` before deployment to test the application logic, compile the production build, and verify route entries, metadata, asset references, sitemap, and the not-found page.
 
+GitHub Pages is deployed by `.github/workflows/pages.yml` on pushes to `main`. The workflow sets `BASE_PATH=/chaus/` and `SITE_URL=https://daniyal-sh.github.io/chaus/`. Local development uses `/` by default. Image paths, navigation, fonts, sharing metadata, and sitemap URLs support the repository subpath; physical HTML entries support direct page loads.
+
 ## What's included
 
 - Illustrated homepage with live regular-hours status in America/Chicago, highlighted drinks, community notices, sustainability, and visit information.

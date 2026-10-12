@@ -37,6 +37,8 @@ import { ChausMascot as Squirrel, FlavorArt as DrinkArt } from "./BrandArtwork";
 import { SeasonalBoard, SocialWall } from "./HouseUpdates";
 import { OriginalCopy } from "./OriginalCopy";
 import { updateMetadata } from "./metadata";
+import { sitePath } from "./sitePath";
+import { withoutBase } from "./paths.mjs";
 import "./styles.css";
 import "./chaus-v2.css";
 import "./chaus-theme.css";
@@ -53,7 +55,7 @@ const routes = [
   "/policies",
 ];
 function resolvePath() {
-  const raw = location.pathname.replace(/\/+$/, "") || "/";
+  const raw = withoutBase(location.pathname, import.meta.env.BASE_URL).replace(/\/+$/, "") || "/";
   const aliases: Record<string, string> = {
     "/contact": "/visit",
     "/apply": "/community",
@@ -99,7 +101,7 @@ function Nav({
   const navigate = React.useContext(NavigationContext);
   return (
     <a
-      href={to}
+      href={sitePath(to)}
       className={className}
       onClick={(e) => {
         if (!e.metaKey && !e.ctrlKey && !e.shiftKey && e.button === 0) {
@@ -133,14 +135,14 @@ function App() {
     };
   }, []);
   useEffect(() => {
-    if (path !== "/404" && location.pathname !== path) {
-      history.replaceState({}, "", `${path}${location.search}${location.hash}`);
+    if (path !== "/404" && location.pathname !== sitePath(path)) {
+      history.replaceState({}, "", `${sitePath(path)}${location.search}${location.hash}`);
     }
     updateMetadata(path);
     setMobile(false);
   }, [path]);
   const navigate = React.useCallback((to: string) => {
-    history.pushState({}, "", to);
+    history.pushState({}, "", sitePath(to));
     setPath(to);
     window.scrollTo({ top: 0, behavior: "instant" });
   }, []);
@@ -169,7 +171,7 @@ function App() {
           <Nav to="/" className="brand">
             <img
               className="brand-roundel"
-              src="/images/avatar.jpg"
+              src={sitePath("/images/avatar.jpg")}
               alt=""
               width="48"
               height="48"
@@ -283,7 +285,7 @@ function App() {
                 <div className="hero-checker" aria-hidden="true" />
                 <img
                   className="hero-mascot"
-                  src="/images/chaus-mascot-v2.webp"
+                  src={sitePath("/images/chaus-mascot-v2.webp")}
                   alt="A smiling Chaus squirrel hugging an iced coffee"
                   width="1254"
                   height="1254"
@@ -355,7 +357,7 @@ function App() {
                 <div className="photo-collage">
                   <div className="photo-paper">
                     <img
-                      src="/images/crew.webp"
+                      src={sitePath("/images/crew.webp")}
                       alt="Coffeehouse crew raising cups together inside Chaus"
                       loading="lazy"
                     />
@@ -363,7 +365,7 @@ function App() {
                   </div>
                   <div className="mini-paper">
                     <img
-                      src="/images/chaus.webp"
+                      src={sitePath("/images/chaus.webp")}
                       alt="A group of Chaus students celebrating together"
                       loading="lazy"
                     />
@@ -471,7 +473,7 @@ function App() {
             <section className="container about-grid">
               <div className="about-photo">
                 <img
-                  src="/images/crew.webp"
+                  src={sitePath("/images/crew.webp")}
                   alt="Keepers of Coffee celebrating together at Chaus"
                 />
                 <span className="handwritten">long live coffeehouse.</span>
@@ -1641,7 +1643,7 @@ function CommunityPage() {
       />
       <div className="container official-banner">
         <img
-          src="/images/social/koc-banner.jpg"
+          src={sitePath("/images/social/koc-banner.jpg")}
           alt="Official Chaus form artwork: a smiling squirrel surrounded by colorful hand-drawn stars"
           width="1600"
           height="400"

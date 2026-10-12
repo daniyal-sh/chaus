@@ -1,5 +1,6 @@
 import { ArrowUpRight, Instagram, Sparkles, Coffee } from "lucide-react";
 import { links } from "./data";
+import { sitePath } from "./sitePath";
 
 export const socialPosts = [
   {
@@ -38,7 +39,7 @@ export function SeasonalBoard() {
           rel="noreferrer"
         >
           <img
-            src="/images/social/instagram-2.jpg"
+            src={sitePath("/images/social/instagram-2.jpg")}
             alt="Chaus's October 2026 pumpkin spice poster, with hand-drawn drinks, stars, and pumpkin vines"
             width="1080"
             height="1080"
@@ -126,7 +127,7 @@ export function SocialWall() {
           >
             <div className="social-post-image">
               <img
-                src={`/images/social/instagram-${post.image}.jpg`}
+                src={sitePath(`/images/social/instagram-${post.image}.jpg`)}
                 alt={post.label + " — " + post.text}
                 width="1080"
                 height="1080"

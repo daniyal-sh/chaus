@@ -1,10 +1,11 @@
 import { DrinkArt } from "./Illustrations";
+import { sitePath } from "./sitePath";
 
 export function ChausMascot({ className = "" }: { className?: string }) {
   return (
     <img
       className={`chaus-mascot ${className}`}
-      src="/images/chaus-mascot-v2.webp"
+      src={sitePath("/images/chaus-mascot-v2.webp")}
       alt=""
       width="1254"
       height="1254"
@@ -33,7 +34,7 @@ export function FlavorArt({
   return asset ? (
     <img
       className={`drink-art flavor-sticker ${className}`}
-      src={`/images/${asset}-v2.webp`}
+      src={sitePath(`/images/${asset}-v2.webp`)}
       alt=""
       loading="lazy"
       width="1254"

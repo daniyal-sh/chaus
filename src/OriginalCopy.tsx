@@ -1,4 +1,5 @@
 import copy from "./originalCopy.json";
+import { sitePath } from "./sitePath";
 
 type CopyBlock = {
   text: string;
@@ -55,7 +56,7 @@ function Paragraph({ block }: { block: CopyBlock }) {
   return (
     <p>
       {block.segments.map((segment, index) => segment.href ? (
-        <a key={index} href={segment.href} target="_blank" rel="noopener noreferrer">
+        <a key={index} href={segment.href.startsWith('/') ? sitePath(segment.href) : segment.href} target="_blank" rel="noopener noreferrer">
           {segment.text}
         </a>
       ) : segment.text)}
