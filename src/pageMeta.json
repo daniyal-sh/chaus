@@ -1,0 +1,12 @@
+{
+  "/": {"title":"Chaus · Rice Coffeehouse","description":"Rice University's student-run coffeehouse since 1990. Explore the menu, grab a coffee, and come hang at the Rice Memorial Center."},
+  "/menu": {"title":"The menu · Chaus","description":"Coffee, tea, Chaus classics, and bakery favorites. Find your drink, check prices, and save your usual."},
+  "/about": {"title":"Our story · Chaus","description":"Meet Rice Coffeehouse, the student-run house behind your favorite coffee, and our Houston partners."},
+  "/catering": {"title":"Catering · Chaus","description":"Bring Rice Coffeehouse to your next event. Plan drinks, explore bakery boxes, and contact our catering team."},
+  "/community": {"title":"Around Chaus · Rice Coffeehouse","description":"Keepers of Coffee, Espresso Yourself, Chaus After Dark, and the latest from @ricecoffeehouse."},
+  "/sustainability": {"title":"Sustainability · Chaus","description":"Bring your own mug, meet our coffee partners, and learn about Coffeehouse's sustainability efforts and Bean Fund."},
+  "/visit": {"title":"Visit & contact · Chaus","description":"Find Rice Coffeehouse in the Rice Memorial Center, next to the bookstore. Check hours, get directions, and get in touch."},
+  "/managers": {"title":"2024–2025 managers · Chaus","description":"Meet Rice Coffeehouse's 2024–2025 management team."},
+  "/policies": {"title":"Good to know · Chaus","description":"Ordering, visitor information, privacy, and past Coffeehouse updates."},
+  "/404": {"title":"Page not found · Chaus","description":"Let's get you back to Coffeehouse."}
+}
