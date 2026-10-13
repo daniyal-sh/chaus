@@ -1154,6 +1154,20 @@ p {
 .team-card h3 {
   font-size: 25px;
 }
+.team-photo {
+  margin: 12px;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: 3px;
+  background: #e9eddf;
+}
+.team-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+}
 .official-banner {
   padding-top: 37px;
 }

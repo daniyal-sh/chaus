@@ -553,13 +553,13 @@ export const cateringMenu = [
   { name: "Hot water", prices: [15, 18, 20] },
 ];
 export const managers = [
-  ["Alysa Bijl-Spiro", "General Manager", "Duncan ’26"],
-  ["Bruce Hurley", "Inventory Manager", "Lovett ’27"],
-  ["Amari Parker", "Personnel Manager", "Hanszen ’26"],
-  ["Abram Alvarado", "Training & Quality", "Duncan ’26"],
-  ["Cristian Castillo", "Catering Manager", "McMurtry ’27"],
-  ["Sammi Frey", "Food Manager", "Hanszen ’27"],
-  ["Alex Breazeale", "Health & Maintenance", "Wiess ’26"],
-  ["Aleena Ahmad", "Finance Manager", "Baker ’27"],
-  ["Timauri-Lee Carby", "Graphics & Marketing", "McMurtry ’26"],
+  ["Alysa Bijl-Spiro", "General Manager", "Duncan ’26", "/images/managers/alysa-bijl-spiro.webp"],
+  ["Bruce Hurley", "Inventory Manager", "Lovett ’27", "/images/managers/bruce-hurley.webp"],
+  ["Amari Parker", "Personnel Manager", "Hanszen ’26", "/images/managers/amari-parker.webp"],
+  ["Abram Alvarado", "Training & Quality", "Duncan ’26", "/images/managers/abram-alvarado.webp"],
+  ["Cristian Castillo", "Catering Manager", "McMurtry ’27", "/images/managers/cristian-castillo.webp"],
+  ["Sammi Frey", "Food Manager", "Hanszen ’27", "/images/managers/sammi-frey.webp"],
+  ["Alex Breazeale", "Health & Maintenance", "Wiess ’26", "/images/managers/alex-breazeale.webp"],
+  ["Aleena Ahmad", "Finance Manager", "Baker ’27", "/images/managers/aleena-ahmad.webp"],
+  ["Timauri-Lee Carby", "Graphics & Marketing", "McMurtry ’26", "/images/managers/timauri-lee-carby.webp"],
 ];

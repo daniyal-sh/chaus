@@ -564,19 +564,17 @@ function App() {
                 </div>
               </div>
               <div className="team-grid">
-                {managers.map(([name, role, college], i) => (
+                {managers.map(([name, role, college, photo]) => (
                   <article className="team-card" key={name}>
-                    <div
-                      className={`team-illustration ${["yellow", "lavender", "pink"][i % 3]}`}
-                    >
-                      <span>
-                        {name
-                          .split(" ")
-                          .map((x) => x[0])
-                          .join("")
-                          .slice(0, 2)}
-                      </span>
-                      <Spark />
+                    <div className="team-photo">
+                      <img
+                        src={sitePath(photo)}
+                        alt={name}
+                        width="640"
+                        height="800"
+                        loading="lazy"
+                        decoding="async"
+                      />
                     </div>
                     <p className="eyebrow">{role}</p>
                     <h3>{name}</h3>
